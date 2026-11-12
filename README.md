@@ -283,7 +283,6 @@ The presentation identifies the team and supervisor. The following full names, r
 | Wael Saadeh | Assisted with project hardware development and integration. |
 | Dr. Rami Sefarjaleni | Project supervisor |
 
-The presentation uses the shorter name “Omar Saadeh” and the spelling “Ali Abed Al Wahed.” The names and contributions above follow the team’s explicit confirmation; they are not inferred from repository ownership or appearances in images. No additional individual responsibilities are assigned.
 
 ## Repository materials and evidence
 
