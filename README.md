@@ -2,6 +2,15 @@
 
 University graduation project: an AI-powered assistive system for visually impaired people using computer vision and real-time audio guidance.
 
+## Project Demonstration
+
+Explore SMART VIEW AI through the two project demonstration videos below.
+
+- [Watch Demo 1](videos/demo_1.mp4)
+- [Watch Demo 2](videos/demo_2.mp4)
+
+The original recordings are stored in the `videos/` directory without changes to their content.
+
 ## Project files
 
 | File | Purpose |
