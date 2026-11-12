@@ -14,7 +14,7 @@ The repository brings together the original Python processing application, a Ras
 - Reduce competing announcements using semantic priority classes and bounding-box area filtering.
 - Use tracking IDs and temporal label accumulation to suppress repeated announcements.
 - Separate vision processing from speech playback through a local-network Raspberry Pi audio node.
-- Explore currency recognition and a smart cane form factor as extensions, with their evidence and limitations documented separately.
+- Develop a Smart Cane obstacle-alert prototype alongside the vision application, and explore currency recognition as an experimental extension.
 
 ## Implementation status
 
@@ -24,8 +24,8 @@ The repository brings together the original Python processing application, a Ras
 | Priority selection and speech suppression | Implemented in source; no comparative user study or quantitative reduction in alerts is provided. |
 | Raspberry Pi audio delivery | TCP sender and eSpeak receiver are implemented; no controlled end-to-end hardware validation report is included. |
 | Money detection | Experimental. A mode and model-loading path exist, and an image shows a banknote detection. Custom weights, training data, and evaluation results are absent. |
-| Smart cane | A physical prototype is pictured. Sensor wiring, firmware, and integrated testing are not documented in the repository. |
-| Ultrasonic sensing | An intended cane-related capability whose implementation is not verified by the supplied source, slides, or image. |
+| Smart Cane | Implemented, tested, and demonstrated obstacle-detection and alert prototype, as confirmed by the project team. A supplied photograph documents the physical prototype; quantitative test records and wiring are not included. |
+| Cane sensor and alert components | Exact ultrasonic sensor, vibration motor, and buzzer models, specifications, wiring, and individual operating behavior cannot be verified from the available repository materials. |
 | Mobile deployment, reading, smart glasses, haptics, offline operation | Future directions in the presentation. A phone interface appears in the videos, but its source and integration are not included in the supplied Python implementation. |
 
 ## System architecture
@@ -107,9 +107,11 @@ Money Detection is therefore an **experimental feature, not a fully deployed cur
 
 ![Physical smart cane prototype demonstrated indoors alongside a handheld phone](WhatsApp%20Image%202026-11-12%20at%2011.11.37%20AM.jpeg)
 
-The photograph documents a physical cane prototype being handled indoors with a phone. It does not establish the sensor model, circuitry, measurement accuracy, or connection to the vision/audio pipeline.
+The Smart Cane is an **implemented and tested prototype**, not merely a proposed feature. The project team confirms that it was successfully built, tested, and demonstrated, detecting obstacles and providing alerts in practical use. The supplied photograph documents the physical prototype. This qualitative team report does not establish detection range, accuracy, reliability, or validation across environments.
 
-An ultrasonic sensor can estimate range by transmitting a pulse and measuring the echo's round-trip travel time. Such ranging could complement camera-based semantic recognition, but neither supplied Python application reads GPIO or ultrasonic measurements. No sensor firmware, wiring diagram, trigger distance, or obstacle-alert mapping is provided. Ultrasonic integration and cane-to-processing-unit feedback remain **unverified in the available implementation**. The image-area filter should not be described as ultrasonic distance sensing.
+An ultrasonic sensor estimates range from an emitted pulse's round-trip echo time. This is distinct from the vision application's bounding-box area heuristic. The available presentation text, source code, and prototype image do not identify exact ultrasonic sensor, vibration motor, or buzzer models or specifications. Sensor firmware, wiring, trigger distances, and the individual vibration/buzzer alert behavior are not documented, so no component model or operating threshold is asserted here.
+
+Neither supplied Python application reads GPIO or ultrasonic measurements. The implemented cane should therefore be distinguished from its connection to the vision/audio pipeline: that connection is not established by the available code. The team's confirmation supports the cane's practical prototype status without implying that the complete combined system has undergone controlled hardware validation.
 
 ## Project Demonstration
 
@@ -198,16 +200,16 @@ The prototype should not be relied upon as a sole mobility or safety aid. The pr
 
 ## Team and verified contributions
 
-The presentation's title and closing slides identify:
+The presentation identifies the team and supervisor. The following full names, roles, and individual contributions were subsequently confirmed by the project team:
 
 | Person | Verified attribution |
 | --- | --- |
-| Wael Saadeh | Graduation project team member and co-preparer of the presentation |
-| Omar Saadeh | Graduation project team member and co-preparer of the presentation |
-| Ali Abed Al Wahed | Graduation project team member and co-preparer of the presentation |
+| Omar Ahmad Saadeh — Team Leader | Led and coordinated the team; responsible for project planning and technical decision-making; worked on main software development and AI system integration. |
+| Ali Abdelwahed | Developed and assembled the Smart Cane; assisted with Raspberry Pi software development and integration. |
+| Wael Saadeh | Assisted with project hardware development and integration. |
 | Dr. Rami Sefarjaleni | Project supervisor |
 
-The supplied presentation does not assign individual coding, model training, hardware, or evaluation responsibilities. Those contributions are left unassigned pending verified attribution rather than inferred from repository ownership or appearances in images.
+The presentation uses the shorter name “Omar Saadeh” and the spelling “Ali Abed Al Wahed.” The names and contributions above follow the team’s explicit confirmation; they are not inferred from repository ownership or appearances in images. No additional individual responsibilities are assigned.
 
 ## Repository materials and evidence
 
@@ -222,4 +224,4 @@ The supplied presentation does not assign individual coding, model training, har
 | Cane prototype | [Original image](WhatsApp%20Image%202026-11-12%20at%2011.11.37%20AM.jpeg) |
 | Demonstration recordings | [Demo 1](videos/demo_1.mp4), [Demo 2](videos/demo_2.mp4) |
 
-This README uses the source for implementation details, readable slide text for project intent and attribution, and supplied images for scene-specific observations. Presentation aspirations are distinguished from code-backed functionality. The portfolio update preserves all original source and media files.
+This README uses the source for software implementation details, readable slide text for project intent and attribution, supplied images for scene-specific observations, and explicit project-team confirmation for individual contributions and the Smart Cane’s built/tested/demonstrated status. Presentation aspirations are distinguished from code-backed functionality. The portfolio update preserves all original source and media files.
