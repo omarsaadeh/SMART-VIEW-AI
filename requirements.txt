@@ -1,0 +1,7 @@
+# Third-party imports in main.py; original dependency versions were not supplied.
+opencv-python
+torch
+ultralytics
+
+# raspberry_pi.py uses only the Python standard library.
+# Install the espeak system executable separately on the Raspberry Pi.
