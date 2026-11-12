@@ -260,17 +260,23 @@ For a different deployment, these source settings must match the actual devices;
 
 ## Limitations and research directions
 
-No controlled accuracy, mAP, latency, power, tracking, audio intelligibility, or user-navigation evaluation is included. The presentation describes normal lighting and moderate scene density as intended conditions and identifies darkness, extreme crowding, and local-network dependence as limitations; it supplies no test protocol to establish operating guarantees.
+Limitations and Future Work
 
-The following remain appropriate future work rather than completed claims:
+SMART VIEW AI was developed as an academic proof-of-concept to explore real-time object detection, intelligent prioritization, and audio-based assistance for visually impaired individuals.
 
-- Evaluate detection and guidance policies on a documented dataset and hardware setup, including false alerts and missed hazards.
-- Compare priority/filtering/tracking policies against an unfiltered announcement baseline.
-- Document and evaluate the currency dataset, weights, and denomination-specific behavior.
-- Document ultrasonic hardware and validate any sensor-to-guidance integration separately.
-- Investigate smart glasses, haptic feedback, reading, mobile deployment, and fully offline operation, as proposed in the presentation.
+The project successfully demonstrates the integration of computer vision, object tracking, decision-making logic, and Raspberry Pi-based audio feedback at the prototype level.
 
-The prototype should not be relied upon as a sole mobility or safety aid. The project materials express an accessibility and humanitarian motivation; they do not constitute a hardware validation or accessibility certification.
+However, comprehensive quantitative evaluation, including detection accuracy, processing latency, tracking performance, and user-navigation testing, remains an important area for future development.
+
+Future improvements include:
+
+* Conducting systematic performance evaluations under different lighting and environmental conditions.
+* Optimizing real-time processing and reducing unnecessary audio announcements.
+* Further developing and evaluating the custom currency detection model.
+* Expanding the integration between the vision system and the smart cane.
+* Investigating mobile deployment, smart glasses, and fully offline operation.
+
+The current implementation is intended for academic research and experimentation rather than use as a certified mobility or safety device.
 
 ## Team and verified contributions
 
