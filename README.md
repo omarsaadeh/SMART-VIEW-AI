@@ -99,9 +99,83 @@ The supplied screenshot shows a person and chair with tracking IDs, accumulated 
 
 ![Experimental money detection screen showing a US twenty-dollar banknote](WhatsApp%20Image%202026-11-12%20at%2011.06.00%20AM.jpeg)
 
-The image shows the application in money mode with a box around a US twenty-dollar banknote. The presentation describes a separate custom YOLO model developed using Roboflow. The code attempts to load `best.pt`, but the repository does not contain those weights, the dataset, training configuration, class list, or held-out evaluation.
+Experimental Money Detection — Custom YOLO Model Using Roboflow
 
-Money Detection is therefore an **experimental feature, not a fully deployed currency recognition system**. The example does not establish accuracy across denominations, currencies, lighting, or viewing angles. If `best.pt` fails to load, the code silently substitutes the general model after printing an error; selecting money mode alone does not prove custom recognition is active. The source uses the same class-and-direction phrase template in both modes rather than a separate currency speech formatter.
+As part of the SMART VIEW AI project, we developed and tested an experimental money detection feature using a custom YOLO-based object detection model and a dataset prepared through Roboflow.
+
+The objective was to explore whether the system could recognize banknotes and provide audio feedback to visually impaired users.
+
+1. Custom Dataset Collection
+
+To develop this feature, we created a custom image dataset containing four currency categories.
+
+* Dataset Size: Approximately 400 images in total.
+* Number of Classes: 4 currency categories.
+* Images per Class: Approximately 100 images.
+* Dataset Platform: Roboflow.
+* Image Diversity: Banknotes were photographed from multiple viewing angles, orientations, and positions.
+* Background Variation: Different backgrounds were used to introduce visual diversity and help the model learn under varying conditions.
+
+Rather than relying exclusively on a pretrained general-purpose detection model, this experiment involved collecting task-specific images and preparing a dedicated dataset for currency recognition.
+
+2. Custom YOLO Model Training
+
+The collected dataset was managed using Roboflow and used to train a custom YOLO-based object detection model.
+
+The experiment involved:
+
+* Collecting and organizing images into four categories.
+* Preparing a custom dataset for object detection.
+* Training a task-specific detection model.
+* Testing the model’s ability to identify banknotes.
+* Observing recognition limitations under different visual conditions.
+
+This process provided practical experience in custom dataset development, computer vision workflows, and object detection model training.
+
+3. Integration into SMART VIEW AI
+
+An experimental money detection mode was implemented within the SMART VIEW AI application.
+
+The source code attempts to load custom YOLO model weights from best.pt when the money detection mode is selected.
+
+The project demonstration includes an example of the application operating in money detection mode, with a bounding box around a US twenty-dollar banknote.
+
+However, the current GitHub repository does not include the trained model weights, original dataset, training configuration, complete class list, or independent evaluation results.
+
+If best.pt cannot be loaded, the application prints an error and falls back to the general object detection model.
+
+Therefore, selecting money detection mode does not necessarily confirm that the custom currency recognition model is active.
+
+4. Audio Feedback
+
+The experimental money detection mode uses the application’s existing object announcement mechanism.
+
+Detected objects are processed through the same class-and-direction speech template used in the general detection mode.
+
+A separate currency-specific speech formatting system was not implemented.
+
+5. Experimental Results and Limitations
+
+Although the custom model was trained and the feature was explored during development, its performance was not sufficiently reliable for inclusion as a validated component of the final assistive system.
+
+The available demonstration does not establish reliable recognition across different denominations, currencies, lighting conditions, backgrounds, or viewing angles.
+
+Additionally, verified quantitative evaluation metrics, such as precision, recall, and mean Average Precision (mAP), are not available in this repository.
+
+For these reasons, money detection remained an experimental feature rather than a fully deployed currency recognition system.
+
+6. Technical Experience Gained
+
+This experiment provided hands-on experience in:
+
+* Custom dataset collection and organization.
+* Dataset management using Roboflow.
+* Image diversity and background variation.
+* Training custom YOLO-based object detection models.
+* Integrating experimental AI models into an existing application.
+* Understanding the importance of model evaluation and real-world reliability.
+
+Although money detection was not retained as a validated feature of the final system, the experiment contributed to the project’s exploration of task-specific computer vision applications.
 
 ## Smart cane prototype and ultrasonic sensing
 
