@@ -95,6 +95,23 @@ The Pi listens on all interfaces on TCP port `5014` and handles one client at a 
 
 The supplied screenshot shows a person and chair with tracking IDs, accumulated label counts, the center line, and a white “Too Far” box. It supports the presence of visual detection and filtering output for this scene. Its instantaneous FPS overlay is not a benchmark, average throughput, or end-to-end latency measurement. A still image cannot establish ID stability over time, speech quality, or safe navigation.
 
+## Temporal Filtering — Five-Frame Confirmation
+
+To improve detection reliability and reduce false or unnecessary audio announcements, SMART VIEW AI incorporates a temporal filtering mechanism.
+
+Instead of immediately announcing every object detected in a single frame, the system requires an object to be detected consistently across five frames before generating audio feedback.
+
+This mechanism helps:
+
+* Reduce false-positive announcements caused by temporary or unstable detections.
+* Improve the consistency of spoken object notifications.
+* Prevent unnecessary audio feedback from objects appearing briefly in the camera view.
+* Provide more stable and meaningful guidance to the user.
+
+By combining YOLO-based object detection, object tracking, and temporal filtering, the system prioritizes consistent detections rather than reacting to every individual frame.
+
+This five-frame confirmation mechanism is intended to improve the reliability of audio announcements, although its effectiveness has not been established through controlled quantitative testing.
+
 ### Experimental Money Detection
 
 ![Experimental money detection screen showing a US twenty-dollar banknote](WhatsApp%20Image%202026-11-12%20at%2011.06.00%20AM.jpeg)
