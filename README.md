@@ -194,6 +194,32 @@ Neither supplied Python application reads GPIO or ultrasonic measurements. The i
 
 Both original MP4 files are preserved. Sampled frames show a phone interface and camera imagery; interface controls alone do not verify working reading, currency recognition, offline inference, or integration with the supplied Python programs. These recordings are qualitative project materials rather than controlled experiments.
 
+## Live Demonstration & Results
+
+SMART VIEW AI was successfully demonstrated during the final graduation project evaluation at Jinan University.
+
+During the live demonstration, the system successfully performed its core functions:
+
+* Real-Time Object Detection: Identified objects and people using the YOLO-based computer vision pipeline.
+* Object Tracking: Tracked detected objects to support consistent identification.
+* Intelligent Prioritization: Applied filtering and priority rules to determine which detected objects should be announced.
+* Audio Guidance: Generated spoken feedback describing detected objects and their relative positions.
+* System Integration: Demonstrated the operation of the computer vision pipeline and its audio feedback components.
+
+The live demonstration confirmed that the core system components could operate together successfully in a controlled academic environment.
+
+Academic Evaluation
+
+Final Graduation Project Grade: 92/100
+
+The project was evaluated as part of the Bachelor’s degree in Computer Science at Jinan University.
+
+Evaluation Scope
+
+Although the live demonstration was successful, it does not establish validated performance in uncontrolled real-world environments.
+
+Further testing would be required to evaluate detection accuracy, system latency, navigation reliability, and usability with visually impaired individuals.
+
 ## Technologies and dependencies
 
 | Technology | Use |
