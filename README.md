@@ -225,3 +225,9 @@ The presentation uses the shorter name “Omar Saadeh” and the spelling “Ali
 | Demonstration recordings | [Demo 1](videos/demo_1.mp4), [Demo 2](videos/demo_2.mp4) |
 
 This README uses the source for software implementation details, readable slide text for project intent and attribution, supplied images for scene-specific observations, and explicit project-team confirmation for individual contributions and the Smart Cane’s built/tested/demonstrated status. Presentation aspirations are distinguished from code-backed functionality. The portfolio update preserves all original source and media files.
+
+Academic Prototype Disclaimer
+SMART VIEW AI was developed as an academic graduation project to explore the application of Artificial Intelligence and Computer Vision in assistive technologies for visually impaired individuals.
+The system is a proof-of-concept prototype intended for educational and research demonstration purposes.
+Although the prototype was successfully demonstrated, it has not undergone the comprehensive security, reliability, and safety validation required for real-world deployment.
+The project is not intended to replace certified mobility aids or professional assistance.
